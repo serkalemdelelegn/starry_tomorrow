@@ -1,0 +1,190 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography and Color Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1F252E;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #242F3E;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 10%;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.logo img {
+    height: 100px; /* Set the height of the logo */
+    width: 100px; /* Maintain aspect ratio */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #00E8F8;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #00E8F8;
+    color: #1F252E;
+}
+
+/* Responsive Navigation Menu Icon */
+.menu {
+    display: none;
+    color: #00E8F8;
+    font-size: 1.5rem;
+}
+
+/* Main Banner */
+.banner {
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 10%;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: #29333d;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1rem;
+    width: calc(33% - 2rem);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service h2 {
+    font-size: 1.5rem;
+    color: #00E8F8;
+}
+
+.service p {
+    margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #242F3E;
+    }
+
+    #click:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+}
+/* Footer Styling */
+footer {
+    background-color: #242F3E;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 80%;
+    margin: auto;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #00E8F8;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+    color: #1F252E;
+}
+
